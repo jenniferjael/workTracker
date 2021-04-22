@@ -7,7 +7,7 @@ if(process.env.MONGODB_URI.length > 0){
     useFindAndModify: false
   });
 } else{
-  mongoose.connect('mongodb://localhost/workout', {
+  mongoose.connect("mongodb://localhost/workout", {
     useNewUrlParser: true,
     useFindAndModify: false
   });
