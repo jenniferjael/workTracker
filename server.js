@@ -12,22 +12,12 @@ app.use(express.json());
 
 app.use(express.static("public"));
 
-//mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/workout", {
-  //useNewUrlParser: true,
-  //useFindAndModify: false
-//});
-
-if(process.env.MONGODB_URI.length > 0){
-  mongoose.connect(process.env.MONGODB_URI, {
-    useNewUrlParser: true,
-    useFindAndModify: false
-  });
-} else{
-mongoose.connect("mongodb://localhost/workout", {
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/workout", {
   useNewUrlParser: true,
   useFindAndModify: false
 });
-}
+
+
 
 // routes
 app.use(require("./routes/api.js"));
