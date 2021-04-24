@@ -14,6 +14,7 @@ if(process.env.MONGODB_URI.length > 0){
   }
 
 let workoutSeed = [
+  
   {
     day: new Date().setDate(new Date().getDate()-10),
     exercises: [
