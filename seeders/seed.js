@@ -1,8 +1,8 @@
 let mongoose = require("mongoose");
 let db = require("../models");
 
-if(process.env.MONGODB_URI.length > 0){
-  mongoose.connect(process.env.MONGODB_URI, {
+if(true){
+  mongoose.connect("mongodb+srv://jennifer_1413:Joel0606%23@cluster0.qrgr9.mongodb.net/work_tracker?retryWrites=true&w=majority", {
     useNewUrlParser: true,
     useFindAndModify: false
   });
@@ -14,7 +14,7 @@ if(process.env.MONGODB_URI.length > 0){
   }
 
 let workoutSeed = [
-  
+
   {
     day: new Date().setDate(new Date().getDate()-10),
     exercises: [
